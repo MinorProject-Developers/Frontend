@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+    --blue:#003087;
+    --seablue:#2070ba;
+    --seablue2: #3d7dca;
+    --whitesmoke: #dfe3ee;
+    --white: #ffffff;
+    --gradient:linear-gradient(255deg, var(--blue), var(--seablue2), var(--white),var(--whitesmoke),var(--seablue));
+}
+
+html::-webkit-scrollbar{
+    width: 9px;
+}
+  
+html::-webkit-scrollbar-track{
+    background:#fff;
+}
+  
+  html::-webkit-scrollbar-thumb{
+    background: var(--seablue2);
+    border-radius: 0px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+body{
+    background: var(--whitesmoke);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+header a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    padding: 10px;
+}
+nav ul li{
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+nav ul li a{
+    color: var(--seablue2);
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+nav ul li a:hover{
+    color: var(--blue);
+}
+.home{
+    width: 100%;
+    min-height: 90vh;
+    animation: myframe 20s ease-in-out infinite;
+    background-size: cover;
+    align-items: center;
+    text-align: left;
+}
+@keyframes myframe {
+    0%,100%{
+        background-image: url("../resources/indexbg.jpg");
+    }
+    25%{
+        background-image: url("../resources/indexbg2.jpg");
+    }
+    50%{
+        background-image: url("../resources/indexbg3.jpg");
+    }
+    75%{
+        background-image: url("../resources/indexbg4.jpg");
+    }    
+}
+.overlay{
+    position: absolute;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    background: rgba(0,0,0,0.5);
+}
+.details{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+}
+.details h1{
+    font-size: 5vw;
+    color: white;
+}
+.details h1 span{
+    color: var(--seablue2);
+    font-size: 6.5vw;
+}
+.details h2{
+    font-size: 2.5vw;
+    color: white;
+}
+.details h2 span{
+    font-size: 4vw;
+    color: var(--seablue2);
+}
+.career-details, .course-details, .course-offered{
+    display: flex;
+    background-color: var(--white);
+    padding: 50px;
+}
+.career-scope, .objective{
+    text-align: left;
+    flex: 60%;
+}
+.career-scope h1, .course-overview h1, .objective h1, .elligibility h1{
+    border-left: solid 5px var(--blue);
+}
+.career-scope p, .course-overview p{
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+.career-duration{
+    padding-left: 20px;
+    text-align: left;
+}
+.career-duration h1{
+    border-left: solid 5px var(--blue);
+}
+.course-details{
+    background-color: var(--whitesmoke);
+}
+.course-overview{
+    padding: 20px;
+}
+.course-dtls, .elligibility{
+    padding-left: 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    color: black;   
+}
+.course-offered{
+    padding: 70px;
+}
+.objective ul{
+    padding-left: 20px;
+    text-align: left;
+}
+.elligibility{
+    width: 70%;
+}
+.footer{
+    
+}
